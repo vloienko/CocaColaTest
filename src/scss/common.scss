@@ -1,0 +1,30 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+
+.h1-title {
+   @include adaptiveValue("font-size", 72, 52);
+}
+
+.h2-title {
+   @include adaptiveValue("font-size", 56, 52);
+}
+
+.h3-title {
+   @include adaptiveValue("font-size", 38, 28);
+}
+
+
+// %h1-title {
+//    font-family: 'Risque';
+//    @include adaptiveValue("font-size", 72, 52);
+// }
+
+// %h2-title {
+//    font-family: 'Risque';
+//    @include adaptiveValue("font-size", 56, 52);
+// }
+
+// %h3-title {
+//    font-family: 'Risque';
+//    @include adaptiveValue("font-size", 38, 28);
+// }

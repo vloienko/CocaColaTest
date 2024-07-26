@@ -1,0 +1,54 @@
+//====================================================================================================
+.page {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   overflow: hidden;
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+   }
+
+   &__screen {}
+}
+
+.screen {
+   flex: 1 0 100%;
+   position: relative;
+
+   &__content {
+      padding: toRem(100) toRem(25) toRem(25) toRem(25);
+      position: relative;
+      z-index: 2;
+   }
+
+   &__title,
+   &__sub-title {
+      font-family: 'Risque';
+   }
+
+   &__body,
+   &__image,
+   &__image img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+   }
+
+   &__body {
+      overflow: hidden;
+   }
+
+   &__image img {
+      object-fit: cover;
+   }
+}
+
+//====================================================================================================

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<div class="page__wrapper">
+				<div class="page__screen screen">
+					<div class="screen__content">
+						<h1 class="screen__title h1-title">Main Site Title</h1>
+						<h3 class="screen__sub-title h3-title">Lorem ipsum descripsum</h3>
+					</div>
+					<div class="screen__body">
+						<div class="screen__image">
+							<!-- <img src="@img/bg/bg-screen-2.jpg" alt="Image background screen"> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="page__screen screen">
+					<div class="screen__content">
+						<h2 class="screen__title h2-title">At least somewhere you can feel new year atmosphere</h2>
+						<h3 class="screen__sub-title h3-title">Choose your present:</h3>
+					</div>
+					<div class="screen__body">
+						<div class="screen__image">
+							<img src="@img/bg/bg-screen-2.jpg" alt="Image background screen">
+						</div>
+					</div>
+				</div>
+
+				<div class="page__screen screen">
+					<div class="screen__content">
+						<h2 class="screen__title h2-title">Write us for real presents</h2>
+					</div>
+					<div class="screen__body">
+						<div class="screen__image">
+							<img src="@img/bg/bg-screen-3.jpg" alt="Image background screen">
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
