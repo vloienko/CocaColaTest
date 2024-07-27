@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"CocaCola"
 })
 
 <body>
@@ -9,41 +9,58 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 			<div class="page__wrapper">
-				<div class="page__screen screen">
-					<div class="screen__content">
-						<h1 class="screen__title h1-title">Main Site Title</h1>
-						<h3 class="screen__sub-title h3-title">Lorem ipsum descripsum</h3>
-					</div>
-					<div class="screen__body">
-						<div class="screen__image">
-							<!-- <img src="@img/bg/bg-screen-2.jpg" alt="Image background screen"> -->
+				<section class="page__screen screen">
+					<div class="screen__container">
+						<div class="screen__content primary">
+							<div class="primary__box">
+								<h1 class="primary__title h1-title">Main Site Title</h1>
+								<h3 class="primary__sub-title h3-title">Lorem ipsum descripsum</h3>
+								<button class="primary__button" type="button">Call to action</button>
+							</div>
+							<div class="primary__santa">
+								<div class="primary__wrap-text">
+									<span>
+										How how how !!! <br>
+										Like it? <br>
+										Scroll down for more !
+									</span>
+								</div>
+								<div class="primary__image">
+									<img src="@img/bg/santa.png" alt="Santa">
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 
-				<div class="page__screen screen">
-					<div class="screen__content">
-						<h2 class="screen__title h2-title">At least somewhere you can feel new year atmosphere</h2>
-						<h3 class="screen__sub-title h3-title">Choose your present:</h3>
-					</div>
-					<div class="screen__body">
-						<div class="screen__image">
-							<img src="@img/bg/bg-screen-2.jpg" alt="Image background screen">
+				<section class="page__screen screen">
+					<div class="screen__container">
+						<div class="screen__content">
+							<h2 class="screen__title h2-title">At least somewhere you can feel new year atmosphere</h2>
+							<h3 class="screen__sub-title h3-title">Choose your present:</h3>
+						</div>
+						<div class="screen__body">
+							<div class="screen__image">
+								<img src="@img/bg/bg-screen-2.jpg" alt="Image background screen">
+							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 
-				<div class="page__screen screen">
-					<div class="screen__content">
-						<h2 class="screen__title h2-title">Write us for real presents</h2>
-					</div>
-					<div class="screen__body">
-						<div class="screen__image">
-							<img src="@img/bg/bg-screen-3.jpg" alt="Image background screen">
+				<section class="page__screen screen">
+					<div class="screen__container">
+						<div class="screen__content">
+							<h2 class="screen__title h2-title">Write us for real presents</h2>
+						</div>
+						<div class="screen__body">
+							<div class="screen__image">
+								<img src="@img/bg/bg-screen-3.jpg" alt="Image background screen">
+							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
+			<!-- <div class="page__scroll"></div> -->
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

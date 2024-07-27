@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Keyboard, Mousewheel } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -28,18 +28,53 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.page')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
-			modules: [Navigation],
+		new Swiper('.page', { // Вказуємо склас потрібного слайдера
+			
+			wrapperClass: 'page__wrapper',
+			slideClass: 'page__screen',
+
+			direction: 'vertical',
+
+			slidesPerView: 'auto',
+
+			parallax: true,
+
+			modules: [Keyboard, Mousewheel],
+			// Клавіатура
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true,
+				pageUpDown: true,
+			},
+			// Мишка
+			// mousewheel: {
+			// 	sensitivity: 1,
+			// },
+			
+			// Якщо слайдів менше, ніж потрібно - вимкнути свайпер
+			watchOverflow: true,
+
+			speed: 800,
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			observeSlideChildren: true,
+
+			// // Скроллбар
+			// scrollbar: {
+			// 	el: '.page__scroll',
+			// 	dragClass: '.page__drag-scroll',
+			// 	// Можливість перетягувати скролл
+			// 	draggable: true,
+			// },
+
+
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			
+			// spaceBetween: 0,
 			//autoHeight: true,
-			speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -57,26 +92,19 @@ function initSliders() {
 			*/
 
 			// Пагінація
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
 
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
+			// pagination: {
+			// 	el: '.swiper-pagination',
+			// 	clickable: true,
+			// },
 
-			// Кнопки "вліво/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+			
+
+			// // Кнопки "вліво/вправо"
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
 			/*
 			// Брейкпоінти
 			breakpoints: {
