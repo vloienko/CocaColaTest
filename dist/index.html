@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"CocaCola"
-})
+
+<head>
+	<title>CocaCola</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240729233057">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<a class="header__logo" href="index.html">
+						<img src="img/logo.webp" alt="Logo CocaCola">
+					</a>
+					<div class="header__menu menu">
+						<nav class="menu-line">
+							<ul class="menu-line__list">
+								<li class="menu-line__item"><a href="#" class="menu-line__link menu-button button--hyperion"><span><span>Main</span></span></a></li>
+								<li class="menu-line__item"><a href="#" class="menu-line__link menu-button button--hyperion"><span><span>About</span></span></a></li>
+								<li class="menu-line__item"><a href="#" class="menu-line__link menu-button button--hyperion"><span><span>Products</span></span></a></li>
+								<li class="menu-line__item"><a href="#" class="menu-line__link menu-button button--hyperion"><span><span>Contacts</span></span></a></li>
+							</ul>
+						</nav>
+						<div class="menu__body">
+							<nav class="menu__wrap">
+								<ul class="menu__list">
+									<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">About</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">Products</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="menu__button-icon">
+							<button type="button" class="menu__icon icon-menu"><span></span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 		<main class="page">
 			<div data-fp class="page__wrapper">
 				<section data-fp-section class="page__section primary">
@@ -26,13 +65,13 @@
 									</span>
 								</div>
 								<div class="primary__image">
-									<img src="@img/bg/santa.png" alt="Santa">
+									<img src="img/bg/santa.webp" alt="Santa">
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="snowflake" data-prlx-parent>
-						<img src="@img/snowflake.png" alt="Snowflake" data-prlx>
+						<img src="img/snowflake.webp" alt="Snowflake" data-prlx>
 					</div>
 				</section>
 
@@ -45,13 +84,13 @@
 									<h3 class="present__sub-title h3-title">Choose your present:</h3>
 									<nav data-tabs-titles class="tabs__navigation">
 										<button type="button" class="tabs__button _tab-active">
-											<img src="@img/present/present-1.png" alt="Present button">
+											<img src="img/present/present-1.webp" alt="Present button">
 										</button>
 										<button type="button" class="tabs__button">
-											<img src="@img/present/present-2.png" alt="Present button">
+											<img src="img/present/present-2.webp" alt="Present button">
 										</button>
 										<button type="button" class="tabs__button">
-											<img src="@img/present/present-3.png" alt="Present button">
+											<img src="img/present/present-3.webp" alt="Present button">
 										</button>
 									</nav>
 								</div>
@@ -65,7 +104,7 @@
 													Lorem</p>
 											</div>
 											<div class="tabs__body-image">
-												<img src="@img/present/present-1.png" alt="Present image">
+												<img src="img/present/present-1.webp" alt="Present image">
 											</div>
 										</div>
 									</div>
@@ -78,7 +117,7 @@
 													Lorem</p>
 											</div>
 											<div class="tabs__body-image">
-												<img src="@img/present/present-2.png" alt="Present image">
+												<img src="img/present/present-2.webp" alt="Present image">
 											</div>
 										</div>
 									</div>
@@ -91,7 +130,7 @@
 													Lorem</p>
 											</div>
 											<div class="tabs__body-image">
-												<img src="@img/present/present-3.png" alt="Present image">
+												<img src="img/present/present-3.webp" alt="Present image">
 											</div>
 										</div>
 									</div>
@@ -127,7 +166,7 @@
 			</div>
 		</main>
 	</div>
-	@@include('html/_js.htm',{})
+	<script src="js/app.min.js?_v=20240729233057"></script>
 </body>
 
 </html>

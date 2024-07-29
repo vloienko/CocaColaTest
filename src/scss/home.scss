@@ -2,27 +2,8 @@
 
 .page {
 
-   &__wrapper {}
-
    &__section {
       position: relative;
-
-      &:first-child::after {
-         content: '';
-         position: absolute;
-         bottom: 0;
-         left: -15.5%;
-         max-width: 524px;
-         max-height: 524px;
-         width: 100%;
-         height: 100%;
-         background: url('../img/snowflake.png') center/cover no-repeat;
-         z-index: -2;
-
-         @media (max-width:$pc) {
-            display: none;
-         }
-      }
 
       &:not(:first-child) {
          &::after {
@@ -37,6 +18,10 @@
          }
       }
 
+      &:nth-child(1) {
+         background: url('../img/bg/bg-stars-snow.svg') center/cover no-repeat;
+      }
+
       &:nth-child(2) {
          background: url('../img/bg/bg-screen-2.jpg') center/cover no-repeat;
       }
@@ -47,6 +32,26 @@
    }
 }
 
+.snowflake {
+   position: fixed;
+   bottom: 0;
+   left: -15.5%;
+   max-width: 524px;
+   max-height: 524px;
+   width: 100%;
+   height: 100%;
+   z-index: -2;
+   overflow: hidden;
+
+   img {
+      max-width: 100%;
+   }
+
+   @media (max-width:$pc) {
+      display: none;
+   }
+}
+
 //====================================================================================================
 
 // primary
@@ -54,13 +59,15 @@
    display: flex;
    align-items: flex-end;
 
-   @media (max-width:$mobile){
+   @media (max-width:$mobile) {
       padding-top: 220px;
       min-height: 820px;
    }
-   
+
    &__container {
       max-width: toRem(1175);
+      position: relative;
+      z-index: 2;
    }
 
    &__container,
@@ -75,7 +82,7 @@
       justify-content: center;
       position: relative;
 
-      @media (max-width:$mobile){
+      @media (max-width:$mobile) {
          justify-content: space-between;
       }
    }
@@ -98,7 +105,23 @@
       border-radius: toRem(20) toRem(20) toRem(20) toRem(0);
       border: 2px solid #FFF;
       background-color: transparent;
+      transition-property: border-radius, scale;
+      transition-duration: .3s;
+      transition-timing-function: ease-in-out;
       @include adaptiveValue("margin-top", 28, 40);
+
+      @media (any-hover: hover) {
+         &:hover {
+            border-radius: toRem(20) toRem(0) toRem(20) toRem(20);
+            scale: 1.1;
+            background-color: rgb(255, 255, 255, 0.5);
+         }
+      }
+
+      &:active {
+         border-radius: toRem(20) toRem(0) toRem(20) toRem(20);
+         background-color: rgb(255, 255, 255, 0.5);
+      }
 
       @media (max-width:$mobileSmall) {
          margin-left: auto;
@@ -118,13 +141,13 @@
       z-index: -1;
       @include adaptiveValue("right", -262, 0);
 
-      @media (max-width:$mobile){
+      @media (max-width:$mobile) {
          position: relative;
          align-items: center;
          justify-content: center;
       }
 
-      @media (max-width:$mobileCustom){
+      @media (max-width:$mobileCustom) {
          left: 0;
          right: 0;
       }
@@ -192,8 +215,6 @@
       justify-content: center;
    }
 
-   &__title {}
-
    &__sub-title {
       @include adaptiveValue("margin-top", 30, 25);
    }
@@ -223,8 +244,6 @@
       justify-content: center;
    }
 
-   &__title {}
-
    &__form {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -233,7 +252,7 @@
       width: 100%;
       @include adaptiveValue("margin-top", 30, 25);
 
-      @media (max-width:$mobileSmall){
+      @media (max-width:$mobileSmall) {
          grid-template-columns: 1fr;
       }
 
@@ -241,15 +260,9 @@
       & .checkbox {
          grid-column: 2 span;
 
-         @media (max-width:$mobileSmall){
+         @media (max-width:$mobileSmall) {
             grid-column: auto;
          }
-      }
-
-      input,
-      select,
-      textarea {
-
       }
    }
 }
