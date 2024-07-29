@@ -52,7 +52,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-taby.html
 Сніппет (HTML): tabs
 */
-//flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "Показати ще"
@@ -109,15 +109,13 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Робота з полями форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
 flsForms.formFieldsInit({
 	viewPass: false,
 	autoHeight: false
 });
-*/
 /* Надсилання форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль форми "кількість" */
 // flsForms.formQuantity();
@@ -126,7 +124,7 @@ flsForms.formFieldsInit({
 // flsForms.formRating();
 
 /* Модуль роботи з select. */
-// import './libs/select.js'
+import './libs/select.js'
 
 /* Модуль роботи з календарем */
 // import './files/forms/datepicker.js'
@@ -167,7 +165,7 @@ flsForms.formFieldsInit({
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-import "./files/sliders.js";
+// import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модулі роботи з прокручуванням сторінки ========================================================================================================================================================================================================================================================
@@ -195,7 +193,7 @@ import "./files/sliders.js";
 // Модуль поекранної прокрутки
 // Документація: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
 // Сніппет(HTML):
-// import './libs/fullpage.js'
+import './libs/fullpage.js'
 
 // Модуль паралаксу
 // Документація: https://template.fls.guru/template-docs/paralaks-pri-skroli.html

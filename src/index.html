@@ -8,7 +8,129 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
+			<div data-fp class="page__wrapper">
+				<section data-fp-section class="page__section primary">
+					<div class="primary__container">
+						<div class="primary__body screen-content">
+							<div class="primary__box">
+								<h1 class="primary__title h1-title">Main Site Title</h1>
+								<h3 class="primary__sub-title h3-title">Lorem ipsum descripsum</h3>
+								<button class="primary__button" type="button">Call to action</button>
+							</div>
+							<div class="primary__santa">
+								<div class="primary__wrap-text">
+									<span>
+										How how how !!! <br>
+										Like it? <br>
+										Scroll down for more !
+									</span>
+								</div>
+								<div class="primary__image">
+									<img src="@img/bg/santa.png" alt="Santa">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-fp-section class="page__section present">
+					<div class="present__container">
+						<div class="present__body screen-content">
+							<div data-tabs data-tabs-animate class="tabs">
+								<div class="tabs__wrap">
+									<h2 class="present__title h2-title">At least somewhere you can feel new year atmosphere</h2>
+									<h3 class="present__sub-title h3-title">Choose your present:</h3>
+									<nav data-tabs-titles class="tabs__navigation">
+										<button type="button" class="tabs__button _tab-active">
+											<img src="@img/present/present-1.png" alt="Present button">
+										</button>
+										<button type="button" class="tabs__button">
+											<img src="@img/present/present-2.png" alt="Present button">
+										</button>
+										<button type="button" class="tabs__button">
+											<img src="@img/present/present-3.png" alt="Present button">
+										</button>
+									</nav>
+								</div>
+								<div data-tabs-body class="tabs__content">
+									<div class="tabs__body">
+										<div class="tabs__block">
+											<div class="tabs__body-info">
+												<span>Best sock ever</span>
+												<p>Reuglar sock have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting
+													industry.
+													Lorem</p>
+											</div>
+											<div class="tabs__body-image">
+												<img src="@img/present/present-1.png" alt="Present image">
+											</div>
+										</div>
+									</div>
+									<div class="tabs__body">
+										<div class="tabs__block">
+											<div class="tabs__body-info">
+												<span>Best christmas hat ever</span>
+												<p>Reuglar sock have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting
+													industry.
+													Lorem</p>
+											</div>
+											<div class="tabs__body-image">
+												<img src="@img/present/present-2.png" alt="Present image">
+											</div>
+										</div>
+									</div>
+									<div class="tabs__body">
+										<div class="tabs__block">
+											<div class="tabs__body-info">
+												<span>Best presents ever</span>
+												<p>Reuglar sock have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting
+													industry.
+													Lorem</p>
+											</div>
+											<div class="tabs__body-image">
+												<img src="@img/present/present-3.png" alt="Present image">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-fp-section class="page__section feedback">
+					<div class="feedback__container">
+						<div class="feedback__body screen-content">
+							<h2 class="feedback__title h2-title">Write us <br> for real presents</h2>
+							<form class="feedback__form" action="files/sendmail/sendmail.php" method="POST">
+								<input type="text" name="form[name]" data-error="Error" placeholder="Name" class="input">
+								<input type="tel" name="form[tel]" data-error="Error" placeholder="Phone" class="input">
+								<select name="form[select]" data-class-modif="form" data-show-selected data-pseudo-label="Gender" class="select">
+									<!-- <option value="1" selected>Gender</option> -->
+									<option value="2">Boy</option>
+									<option value="3">Girl</option>
+								</select>
+								<input type="email" name="form[email]" data-error="Error" placeholder="Email" class="input">
+								<textarea name="form[textarea]" placeholder="Your witsh" class="input"></textarea>
+								<div class="checkbox">
+									<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[checkbox]">
+									<label for="c_1" class="checkbox__label"><span class="checkbox__text">Whant Coca-cola with present ?</span></label>
+								</div>
+
+
+								<button type="submit" class="button">Send</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+
+
+
+		<!-- <main class="page">
 			<div class="page__wrapper">
+
 				<section class="page__screen screen">
 					<div class="screen__container">
 						<div class="screen__content primary">
@@ -36,8 +158,63 @@
 				<section class="page__screen screen">
 					<div class="screen__container">
 						<div class="screen__content">
-							<h2 class="screen__title h2-title">At least somewhere you can feel new year atmosphere</h2>
-							<h3 class="screen__sub-title h3-title">Choose your present:</h3>
+							<div data-tabs data-tabs-animate class="tabs">
+								<div class="tabs__wrap">
+									<h2 class="screen__title h2-title">At least somewhere you can feel new year atmosphere</h2>
+									<h3 class="screen__sub-title h3-title">Choose your present:</h3>
+									<nav data-tabs-titles class="tabs__navigation">
+										<button type="button" class="tabs__button tab-active">
+											<img src="@img/present/present-1.png" alt="Present button">
+										</button>
+										<button type="button" class="tabs__button">
+											<img src="@img/present/present-2.png" alt="Present button">
+										</button>
+										<button type="button" class="tabs__button">
+											<img src="@img/present/present-3.png" alt="Present button">
+										</button>
+									</nav>
+								</div>
+								<div data-tabs-body class="tabs__content">
+									<div class="tabs__body">
+										<div class="tabs__block">
+											<div class="tabs__body-info">
+												<span>Best sock ever</span>
+												<p>Reuglar sock have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting industry.
+													Lorem</p>
+											</div>
+											<div class="tabs__body-image">
+												<img src="@img/present/present-1.png" alt="Present image">
+											</div>
+										</div>
+									</div>
+									<div class="tabs__body">
+										<div class="tabs__block">
+											<div class="tabs__body-info">
+												<span>Best christmas hat ever</span>
+												<p>Reuglar sock have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting
+													industry.
+													Lorem</p>
+											</div>
+											<div class="tabs__body-image">
+												<img src="@img/present/present-2.png" alt="Present image">
+											</div>
+										</div>
+									</div>
+									<div class="tabs__body">
+										<div class="tabs__block">
+											<div class="tabs__body-info">
+												<span>Best presents ever</span>
+												<p>Reuglar sock have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting
+													industry.
+													Lorem</p>
+											</div>
+											<div class="tabs__body-image">
+												<img src="@img/present/present-3.png" alt="Present image">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="screen__body">
 							<div class="screen__image">
@@ -60,8 +237,10 @@
 					</div>
 				</section>
 			</div>
-			<!-- <div class="page__scroll"></div> -->
-		</main>
+		</main> -->
+		
+
+		
 		@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_js.htm',{})

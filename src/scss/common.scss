@@ -1,5 +1,10 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
+.h1-title,
+.h2-title,
+.h3-title {
+   font-family: 'Risque';
+}
 
 .h1-title {
    @include adaptiveValue("font-size", 72, 52);

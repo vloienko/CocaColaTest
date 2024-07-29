@@ -1,23 +1,139 @@
 .tabs {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 28px;
+
+	@media (max-width:$pc){
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__wrap {
+		max-width: 715px;
+		margin-right: 20px;
+
+		@media (max-width:$pc){
+			max-width: 100%;
+		}
+	}
+
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
+		align-items: center;
+		gap: toRem(35);
+		@include adaptiveValue("margin-top", 30, 34);
 	}
-	// .tabs__title
-	&__title {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
-		border-radius: toRem(5);
-		&._tab-active {
-			border: 1px solid #000;
+
+	// .tabs__button
+	&__button {
+		border: 4px solid transparent;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 150px;
+		height: 150px;
+		background-color: #fff;
+		box-shadow: 4px 10px 15px 0px rgba(0, 0, 0, 0.25) inset;
+		overflow: hidden;
+		transition: border-color, background-color .3s ease-in-out;
+
+		@media (max-width:$pc){
+			width: 110px;
+			height: 110px;
 		}
+
+		&._tab-active {
+			border-color: #fff;
+			background-color: transparent;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		&:nth-child(1) img {
+			max-width: 70px;
+			margin-right: 10px;
+		}
+
+		&:nth-child(2) img {
+			max-width: 124px;
+			margin-left: 2px;
+		}
+
+		&:nth-child(3) img {
+			max-width: 95px;
+			margin-left: 14px;
+			margin-bottom: 6px;
+		}
+
+
 	}
+
 	// .tabs__content
 	&__content {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
+		max-width: 552px;
+		width: 100%;
+		border-radius: 20px;
+		border: 3px solid #FFF;
+
+		@media (max-width:$pc){
+			max-width: 800px;
+			margin-top: 40px;
+		}
 	}
+
 	// .tabs__body
 	&__body {
 	}
+	
+	&__block {
+		padding: toRem(58) toRem(35);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		overflow: hidden;
+	}
+
+	&__body-info {
+		max-width: 280px;
+		width: 100%;
+		margin-right: 20px;
+
+		@media (max-width:$pc){
+			max-width: 100%;
+		}
+
+		span {
+			font-family: 'Risque';
+			font-size: toRem(42);
+		}
+
+		p {
+			margin-top: 30px;
+			font-size: toRem(28);
+		}
+	}
+
+	&__body-image {
+		max-width: 160px;
+
+		img {
+			max-width: 100%;
+		}
+	}
 }
+
+.screen {
+
+	&__title {}
+
+	&__sub-title {}
+}
+
+.h2-title {}
+
+.h3-title {}

@@ -1,7 +1,10 @@
 .checkbox {
 	position: relative;
+	display: flex;
+	grid-column: 2 span;
+
 	&:not(:last-child) {
-		margin-bottom: em(5);
+		margin-bottom: toRem(5);
 	}
 	// .checkbox__input
 	&__input {
@@ -13,11 +16,13 @@
 			box-shadow: 0 0 5px #000;
 		}
 		&:checked + .checkbox__label:before {
-			background: #000;
+			background: url('../img/icon/select-check.svg') center/11px no-repeat;
+			background-color: #fff;
 		}
 	}
 	// .checkbox__label
 	&__label {
+		color: #D02B2B;
 		cursor: pointer;
 		display: inline-flex;
 		position: relative;
@@ -28,7 +33,8 @@
 			flex: 0 0 20px;
 			width: 20px;
 			height: 20px;
-			border: 1px solid #a7a9ac;
+			border: 2px solid #D02B2B;
+			border-radius: 4px;
 		}
 	}
 	// .checkbox__text

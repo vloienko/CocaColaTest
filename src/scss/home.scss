@@ -1,133 +1,63 @@
 //====================================================================================================
+
 .page {
-   position: fixed;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   overflow: hidden;
 
-   &__wrapper {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-   }
+   &__wrapper {}
 
-   &__screen {}
-
-   // &__scroll {
-   //    position: absolute;
-   //    top: 0;
-   //    right: 0;
-   //    width: 4px;
-   //    height: 100%;
-   //    background-color: rgb(0, 0, 0, 0.5);
-   // }
-
-   // &__drag-scroll {
-   //    position: absolute;
-   //    top: 0;
-   //    left: 0;
-   //    width: 100%;
-   //    background-color: rgb(0, 0, 0, 0.9);
-   //    cursor: pointer;
-   // }
-}
-
-.screen {
-   flex: 1 0 100%;
-   position: relative;
-
-   &:first-child::after{
-      content:'';
-      position: absolute;
-      bottom: -5%;
-      left: -15.5%;
-      max-width: 524px;
-      max-height: 524px;
-      width: 100%;
-      height: 100%;
-      background: url('../img/snowflake.png') center/cover no-repeat;
-      z-index: -2;
-
-      @media (max-width:$pc){
-         display: none; 
-      }
-   }
-
-   &__content {
-      padding: toRem(140) toRem(25) toRem(25) toRem(25);
+   &__section {
       position: relative;
-      z-index: 2;
-   }
 
-   &__title,
-   &__sub-title {
-      font-family: 'Risque';
-   }
+      &:first-child::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: -15.5%;
+         max-width: 524px;
+         max-height: 524px;
+         width: 100%;
+         height: 100%;
+         background: url('../img/snowflake.png') center/cover no-repeat;
+         z-index: -2;
 
-   &__body,
-   &__image,
-   &__image img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-   }
+         @media (max-width:$pc) {
+            display: none;
+         }
+      }
 
-   &__body {
-      overflow: hidden;
-   }
+      &:nth-child(2) {
+         background: url('../img/bg/bg-screen-2.jpg') center/cover no-repeat;
+      }
 
-   &__image img {
-      object-fit: cover;
+      &:nth-child(3) {
+         background: url('../img/bg/bg-screen-3.jpg') center/cover no-repeat;
+      }
    }
 }
 
 //====================================================================================================
 
-// .primary-bg {
-
-//    &__image {
-//       position: absolute;
-//       width: 100%;
-//       height: 100%;
-//       top: 0;
-//       left: 0;
-
-//       img {
-//          position: absolute;
-//          bottom: -6px;
-//          right: -118px;
-//          max-width: 1000px;
-//          max-height: 580px;
-//          width: 100%;
-//          height: 100%;
-//          object-fit: contain;
-//          object-position: center;
-//       }
-//    }
-// }
-
+// primary
 .primary {
-   display: flex;
-   align-items: center;
-   width: 100%;
-   height: 100vh;
-   z-index: -1;
-
-   &__box {
-      position: absolute;
-      top: 33.5%;
-      z-index: 2;
-      @include adaptiveValue("margin-left", 45, 0);
+   
+   &__container {
+      max-width: toRem(1175);
    }
 
-   &__title,
-   &__sub-title {
-      font-family: 'Risque';
+   &__container,
+   &__body {
+      width: 100%;
+      height: 100%;
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+   }
+
+   &__box {
+      @include adaptiveValue("margin-bottom", 34, 124);
    }
 
    &__sub-title {
@@ -144,12 +74,17 @@
       border: 2px solid #FFF;
       background-color: transparent;
       @include adaptiveValue("margin-top", 28, 40);
+
+      @media (max-width:$mobileSmall) {
+         margin-left: auto;
+         margin-right: auto;
+      }
    }
 
    &__santa {
       position: absolute;
-      bottom: -1%;
-      right: -15%;
+      bottom: 0;
+      right: -23%;
       max-width: 1000px;
       max-height: 580px;
       width: 100%;
@@ -157,6 +92,10 @@
       display: flex;
       align-items: flex-end;
       z-index: -1;
+
+      @media (max-width:$mobile) {
+         right: -5%;
+      }
    }
 
    &__wrap-text {
@@ -169,9 +108,10 @@
       align-items: center;
       justify-content: center;
       background: url('../img/bg/cloud.png') center/cover no-repeat;
-      padding: toRem(0) toRem(22) toRem(15) toRem(0);
+      padding-right: toRem(18);
+      padding-bottom: toRem(4);
 
-      @media (max-width:$pc){
+      @media (max-width:$pc) {
          display: none;
       }
 
@@ -184,8 +124,8 @@
    }
 
    &__image {
-
       img {
+         min-width: 544px;
          width: 100%;
          height: 100%;
          object-fit: contain;
@@ -194,3 +134,69 @@
    }
 }
 
+//====================================================================================================
+
+// present
+.present {
+   padding-top: 80px;
+   padding-bottom: 80px;
+
+   &__container,
+   &__body {
+      width: 100%;
+      height: 100%;
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__title {}
+
+   &__sub-title {
+      @include adaptiveValue("margin-top", 30, 25);
+   }
+}
+
+//====================================================================================================
+
+// feedback
+.feedback {
+   padding-top: 130px;
+   padding-bottom: 80px;
+
+   &__container,
+   &__body {
+      width: 100%;
+      height: 100%;
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__title {}
+
+   &__form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 468px;
+      width: 100%;
+      @include adaptiveValue("margin-top", 30, 25);
+
+      textarea {
+         grid-column: 2 span;
+      }
+
+      input,
+      select,
+      textarea {
+
+      }
+   }
+}

@@ -8,22 +8,29 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
+
 .input {
-	border-radius: 0 !important;
+	border-radius: 15px;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: 15px 20px;
+	border: 3px solid #fff;
 	caret-color: inherit;
-	&._form-focus {
-	}
-	&._form-error {
-	}
+
+	&._form-focus {}
+
+	&._form-error {}
 }
+
 .input[placeholder]:not([data-placeholder-nohiden]) {
 	&::placeholder {
 		transition: opacity 0.3s;
+		color: var(--text-white);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: normal;
 	}
+
 	&:focus::placeholder {
 		opacity: 0;
 	}
@@ -31,5 +38,4 @@ textarea {
 
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
 }
