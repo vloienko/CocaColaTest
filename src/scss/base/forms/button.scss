@@ -2,10 +2,24 @@
 // Сніппет (HTML): btn
 
 .button {
+	font-size: 16px;
+	font-weight: 600;
+	width: 100%;
 	display: inline-flex;
-	padding: 0px 0px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 15px 20px;
+	background-color: var(--accent);
+	border-radius: 15px;
+	border: 3px solid transparent;
+	transition: all .3s ease-in-out;
+
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: #fff;
+			border-color: var(--accent);
+			color: var(--accent);
 		}
 	}
 	&--fw {

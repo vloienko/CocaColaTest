@@ -233,8 +233,17 @@
       width: 100%;
       @include adaptiveValue("margin-top", 30, 25);
 
-      textarea {
+      @media (max-width:$mobileSmall){
+         grid-template-columns: 1fr;
+      }
+
+      textarea,
+      & .checkbox {
          grid-column: 2 span;
+
+         @media (max-width:$mobileSmall){
+            grid-column: auto;
+         }
       }
 
       input,

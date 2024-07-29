@@ -21,6 +21,7 @@
 
 		border-radius: 15px;
 		border: 3px solid #fff;
+		transition: border-color .2s ease;
 	}
 
 	// .select__value
@@ -127,7 +128,8 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				// background: #d9d9d9;
+				color: #D02B2B;
 			}
 		}
 	}
@@ -165,6 +167,14 @@
 		}
 	}
 
+	&._form-error .select__title {
+		border-color: #D02B2B;
+	}
+
+	&._form-focus .select__title {
+		border-color: #fff;
+	}
+
 	&._select-disabled {}
 
 	&._select-active {}
@@ -174,6 +184,7 @@
 	&._select-multiple {}
 
 	&._select-checkbox {}
+
 }
 
 // Тег

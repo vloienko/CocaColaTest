@@ -16,10 +16,13 @@ textarea {
 	padding: 15px 20px;
 	border: 3px solid #fff;
 	caret-color: inherit;
+	transition: border-color .2s ease;
 
 	&._form-focus {}
 
-	&._form-error {}
+	&._form-error {
+		border-color: #D02B2B;
+	}
 }
 
 .input[placeholder]:not([data-placeholder-nohiden]) {

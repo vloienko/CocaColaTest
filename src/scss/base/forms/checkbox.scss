@@ -1,7 +1,6 @@
 .checkbox {
 	position: relative;
 	display: flex;
-	grid-column: 2 span;
 
 	&:not(:last-child) {
 		margin-bottom: toRem(5);
@@ -22,11 +21,13 @@
 	}
 	// .checkbox__label
 	&__label {
-		color: #D02B2B;
+		color: #fff;
 		cursor: pointer;
 		display: inline-flex;
 		position: relative;
 		gap: 10px;
+		transition: border-color .2s ease;
+		
 		&:before {
 			content: "";
 			align-self: flex-start;
@@ -40,5 +41,9 @@
 	// .checkbox__text
 	&__text {
 		align-self: center;
+	}
+
+	&._form-error .checkbox__label {
+		color: #D02B2B;
 	}
 }

@@ -7,8 +7,8 @@
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
-		<main class="page">
-			<div data-fp class="page__wrapper">
+		<main class="page">data-fp
+			<div  class="page__wrapper">
 				<section data-fp-section class="page__section primary">
 					<div class="primary__container">
 						<div class="primary__body screen-content">
@@ -102,22 +102,20 @@
 					<div class="feedback__container">
 						<div class="feedback__body screen-content">
 							<h2 class="feedback__title h2-title">Write us <br> for real presents</h2>
-							<form class="feedback__form" action="files/sendmail/sendmail.php" method="POST">
-								<input type="text" name="form[name]" data-error="Error" placeholder="Name" class="input">
-								<input type="tel" name="form[tel]" data-error="Error" placeholder="Phone" class="input">
-								<select name="form[select]" data-class-modif="form" data-show-selected data-pseudo-label="Gender" class="select">
-									<!-- <option value="1" selected>Gender</option> -->
-									<option value="2">Boy</option>
-									<option value="3">Girl</option>
+							<form class="feedback__form" action="files/sendmail/sendmail.php" method="POST" data-dev>
+								<input type="text" name="form[name]" placeholder="Name" data-required class="input">
+								<input type="tel" name="form[tel]" placeholder="Phone" data-required class="input">
+								<select name="form[select]" data-class-modif="form" data-show-selected class="select">
+									<option value="" selected>Gender</option>
+									<option value="1">Boy</option>
+									<option value="2">Girl</option>
 								</select>
-								<input type="email" name="form[email]" data-error="Error" placeholder="Email" class="input">
+								<input type="email" name="form[email]" placeholder="Email" data-required class="input">
 								<textarea name="form[textarea]" placeholder="Your witsh" class="input"></textarea>
 								<div class="checkbox">
-									<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[checkbox]">
+									<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[checkbox]" data-required>
 									<label for="c_1" class="checkbox__label"><span class="checkbox__text">Whant Coca-cola with present ?</span></label>
 								</div>
-
-
 								<button type="submit" class="button">Send</button>
 							</form>
 						</div>
