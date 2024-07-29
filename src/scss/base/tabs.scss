@@ -6,7 +6,7 @@
 
 	@media (max-width:$pc){
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 	}
 
 	&__wrap {
@@ -38,7 +38,7 @@
 		background-color: #fff;
 		box-shadow: 4px 10px 15px 0px rgba(0, 0, 0, 0.25) inset;
 		overflow: hidden;
-		transition: border-color, background-color .3s ease-in-out;
+		transition: border-color, background-color .6s ease-in-out;
 
 		@media (max-width:$pc){
 			width: 110px;
@@ -82,12 +82,17 @@
 
 		@media (max-width:$pc){
 			max-width: 800px;
-			margin-top: 40px;
+			margin-top: 74px;
+		}
+
+		@media (max-width:$mobileCustom){
+			border: none; 
 		}
 	}
 
 	// .tabs__body
 	&__body {
+		position: relative;
 	}
 	
 	&__block {
@@ -96,6 +101,10 @@
 		align-items: center;
 		justify-content: space-between;
 		overflow: hidden;
+		
+		@media (max-width:$mobileCustom){
+			flex-direction: column-reverse;
+		}
 	}
 
 	&__body-info {
@@ -107,6 +116,11 @@
 			max-width: 100%;
 		}
 
+		@media (max-width:$mobileCustom){
+			margin: 20px 0px 0px 0px;
+			text-align: center;
+		}
+
 		span {
 			font-family: 'Risque';
 			font-size: toRem(42);
@@ -115,6 +129,10 @@
 		p {
 			margin-top: 30px;
 			font-size: toRem(28);
+
+			@media (max-width:$mobileCustom) {
+				text-align: left;
+			}
 		}
 	}
 
