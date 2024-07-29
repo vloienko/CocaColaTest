@@ -50,6 +50,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 $pc: toEm($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
 $tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
 $mobile: toEm(767.98); // Телефони L
+$mobileCustom: toEm(639.98); // Телефони M
 $mobileSmall: toEm(479.98); // Телефони S
 
 // Тип адаптива:

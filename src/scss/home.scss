@@ -38,6 +38,13 @@
 
 // primary
 .primary {
+   display: flex;
+   align-items: flex-end;
+
+   @media (max-width:$mobile){
+      padding-top: 220px;
+      min-height: 820px;
+   }
    
    &__container {
       max-width: toRem(1175);
@@ -54,10 +61,15 @@
       flex-direction: column;
       justify-content: center;
       position: relative;
+
+      @media (max-width:$mobile){
+         justify-content: space-between;
+      }
    }
 
    &__box {
-      @include adaptiveValue("margin-bottom", 34, 124);
+      max-width: 452px;
+      @include adaptiveValue("margin-bottom", 34, 76);
    }
 
    &__sub-title {
@@ -84,7 +96,6 @@
    &__santa {
       position: absolute;
       bottom: 0;
-      right: -23%;
       max-width: 1000px;
       max-height: 580px;
       width: 100%;
@@ -92,9 +103,17 @@
       display: flex;
       align-items: flex-end;
       z-index: -1;
+      @include adaptiveValue("right", -262, 0);
 
-      @media (max-width:$mobile) {
-         right: -5%;
+      @media (max-width:$mobile){
+         position: relative;
+         align-items: center;
+         justify-content: center;
+      }
+
+      @media (max-width:$mobileCustom){
+         left: 0;
+         right: 0;
       }
    }
 
@@ -124,6 +143,7 @@
    }
 
    &__image {
+
       img {
          min-width: 544px;
          width: 100%;
